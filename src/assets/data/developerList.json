@@ -1,0 +1,20 @@
+[
+    {
+        "name" : "String", 
+        "role": "String", 
+        "userId": 2123
+    }, 
+    {
+        "name" : "String2", 
+        "role": "String", 
+        "userId": 2323
+    }, {
+        "name" : "String3", 
+        "role": "String", 
+        "userId": 2313
+    }, {
+        "name" : "String4", 
+        "role": "String", 
+        "userId": 2312
+    }
+]

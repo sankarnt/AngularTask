@@ -1,0 +1,86 @@
+.task-wrapper {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    .task-header {
+        border-bottom: 1px solid #dedede;
+        padding: 10px;
+        flex: 1;
+    }
+
+    .tasks-container {
+        flex: 1;
+        margin-top: 20px;
+        align-content: center;
+        .task-card {
+            max-width: 300px;
+            border-radius: 5px;
+            border: 1px solid #dedede;
+            padding: 10px;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+        .default {
+            background: #fff;
+        }
+        .grey {
+            background-color:#7b7979;
+        }
+        .red {
+            background-color:#ff4c4c;
+        }
+        .blue {
+            background-color:#85d7ea;
+        }
+        .yellow {
+            background-color: #ffc107;
+        }
+        .orange {
+            background-color: #ef6c38;
+        }
+    }
+    #taskModal {
+        display: block;
+    }
+    .modal-body {
+        display: flex;
+        .form-element-wrapper {
+            flex: 1;
+            padding: 0px 5px 0px 5px;
+            input, select {
+                border: none;
+                border-bottom: 1px solid #dedede;
+                width: 100%;
+            }
+            
+            input:focus{
+                outline: none;
+            }
+            select:focus{
+                outline: none;
+            }
+        }
+    }
+    
+    .add-task-button-wrapper {
+        position: fixed;
+        bottom: 65px;
+        right: 50px;
+        .add-task-btn {
+            background: none;
+            border: none;
+            color: #ffc107;
+            font-size: 12px;
+            border: 1px solid #ffc107;
+            border-radius: 17px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+    .show-task-modal{
+        display: block;
+    }
+}
+

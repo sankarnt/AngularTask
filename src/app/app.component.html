@@ -1,0 +1,5 @@
+<app-header title="{{appTitle}}"></app-header>
+
+<div class="container-fluid app-container" [@routeAnimation]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+</div>

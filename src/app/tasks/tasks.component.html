@@ -1,0 +1,44 @@
+<div class="task-wrapper">
+  <div class="task-header">
+    Tasks
+  </div>
+  <div class="tasks-container">
+    <div (click)="taskCompleted(task)" class="task-card {{task.classAdded}}" @myInsertRemoveTrigger  *ngFor="let task of tasks">{{task.title}}</div>
+  </div>
+  <div class="add-task-button-wrapper">
+    <button (click)="showTaskModal();" class="add-task-btn">+</button>
+  </div>
+  <div [@openCloseModal]="showHideModal ? 'openModal' : 'closeModal'" class="modal" id="taskModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add Task</h5>
+        </div>
+        <form [formGroup]="taskForm">
+          <div class="modal-body">
+            <div class="form-element-wrapper">
+                <input type="text" formControlName="title" placeholder="Task to be done...">
+            </div>
+            <div class="form-element-wrapper">
+              <select formControlName="classAdded">
+                <option value="">-- select a color --</option>
+                <option value="default">Default</option>
+                <option value="red">Fiery Red</option>
+                <option value="grey">Star Dust</option>
+                <option value="blue">Marina Blue</option>
+                <option value="orange">Dashing Orange</option>
+                <option value="yellow">Lemony yellow</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button (click)="closeTaskModal();" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" (click)="saveTask()" class="btn btn-primary">Add</button>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+  <!-- <span class="iconic iconic-brush iconic-md iconic-size-lg iconic-flip-horizontal" title="brush" aria-hidden="true"></span> -->
+</div>
