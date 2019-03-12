@@ -1,15 +1,8 @@
 <div>
-  <ul>
-    <li *ngFor="let treenode of formattedTreeNodes | keyvalue ">
-      {{treenode.value.text}}
-      <ul *ngIf="treenode.value.childElts.length > 0">
-        <!-- <pre>
+  <div ></div>
 
-        </pre> -->
-        <li *ngFor="let childelt of treenode.value.childElts">
-          <pre>{{childelt.text}}</pre>
-        </li>
-      </ul>
-    </li>
+  <ul innerHTML="{{treeHtmlData}}">
+    
   </ul>
+
 </div>
